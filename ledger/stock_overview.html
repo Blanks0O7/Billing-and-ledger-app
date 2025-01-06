@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Overview</title>
+</head>
+<body>
+    <h1>Stock Overview</h1>
+    <table border="1">
+        <tr>
+            <th>Rubber Type</th>
+            <th>Bags in Stock</th>
+            <th>Weight per Bag (kg)</th>
+            <th>Price per Kg (NRS)</th>
+        </tr>
+        {% for rubber in rubber_types %}
+        <tr>
+            <td>{{ rubber.name }}</td>
+            <td>{{ rubber.stock_bags }}</td>
+            <td>{{ rubber.bag_weight }}</td>
+            <td>{{ rubber.price_per_kg }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
